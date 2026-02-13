@@ -1,2 +1,4 @@
 # web-dev-projects
-An amazing repo for learning and practicing web dev with real llife projects
+
+A collection of web development projects including frontend, backend, and full stack projects for learning and practice.
+

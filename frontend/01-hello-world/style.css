@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.paragraph-1 {
+  color: rgb(240, 248, 255);
+}
+
+#author {
+  color: rgb(0, 200, 255);
+}
+
+#author > span {
+  color: rgb(142, 155, 159);
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  padding: 0 10%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  color: black;
+  font-size: large;
+  cursor: pointer;
+}
+
+.secret-button {
+  color: rgb(247, 75, 75);
+  font-weight: bold;
+}
+
+.secret-paragraph {
+  opacity: 0;
+  color: rgb(255, 90, 90);
+}
+
+.secret-paragraph.show-secret {
+  opacity: 100;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  font-size: large;
+}

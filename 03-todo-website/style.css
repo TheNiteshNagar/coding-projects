@@ -1,0 +1,22 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.submit-button {
+    cursor: pointer;
+}
+

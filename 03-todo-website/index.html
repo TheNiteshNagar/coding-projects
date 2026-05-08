@@ -8,20 +8,19 @@
 </head>
 <body>
     <header>
-        <div class="logo">Todo</div>
+        <div class="logo">Todo Website</div>
     </header>
     <main>
-        <section class="todo-form-section">
+        <section class="add-todo-page">
             <form id="todo-form">
-                <label for="todo">Enter Todo:</label>
-                <input type="text" id="todo" name="todo" placeholder="Add Your Task" autocomplete="off">
-                <input type="submit" value="Submit" class="submit-button">
+                <input type="text" id="input-todo" autocomplete="off" placeholder="What is in your mind?" autofocus>
+
+                <input type="submit" id="submit-button" value="Submit">
             </form>
         </section>
-        <section class="todos">
-            <ul id="todo-lists">
-                
-            </ul>
+
+        <section class="list-todo-page">
+            <ul id="todos-list"></ul>
         </section>
     </main>
     <footer></footer>

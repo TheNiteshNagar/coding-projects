@@ -2,6 +2,7 @@
     --bg: #ffffff;
     --text: #1a1a1a;
     --accent: #666666;
+    --alert: #ff0000;
 }
 
 * {
@@ -14,9 +15,99 @@ body {
     min-height: 100vh;
     background-color: var(--bg);
     color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+    user-select: none;
 }
 
-.submit-button {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    height: 50px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
     cursor: pointer;
 }
 
+.logo:hover {
+    color: var(--accent);
+}
+
+main {
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.add-todo-page {
+    margin-top: 2rem;
+}
+
+#todo-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#todo-form #input-todo {
+    width: 500px;
+    height: 7vh;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+}
+
+#todo-form #submit-button {
+    width: 100px;
+    height: 7vh;
+    cursor: pointer;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    width: calc(500px + 100px + 0.5rem);
+}
+
+li {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+li span {
+    border: 1px solid var(--accent);
+    width: 500px;
+    border-radius: 4px;
+    padding-left: 1rem;
+}
+
+li button {
+    width: 100px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    background: var(--alert);
+    color: var(--bg);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}

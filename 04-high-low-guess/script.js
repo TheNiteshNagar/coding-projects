@@ -4,27 +4,29 @@ const submitBtn = document.getElementById('submit-button');
 const outputSection = document.querySelector('.output')
 
 let computerGuess = randomNumberGenerator(1, 100)
-console.log(computerGuess)
+let attempts = 0
 
 gameForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const userGuess = inputNumber.value.trim();
 
-    if(userGuess<1 || userGuess > 100) {
+    if (userGuess < 1 || userGuess > 100) {
         setStatus('Choose Number Between 1 to 100')
+        inputNumber.value = ''
+        return
     }
 
-    if(userGuess == computerGuess) {
+    if (userGuess == computerGuess) {
         setStatus('Congratulations. You Won 🥳')
         playAgain()
-    } else if(userGuess < computerGuess) {
+    } else if (userGuess < computerGuess) {
         setStatus('Too Low...')
-    } else if(userGuess > computerGuess) {
+    } else if (userGuess > computerGuess) {
         setStatus('Too High...')
     }
 
-    inputNumber.value = ''    
+    inputNumber.value = ''
 })
 
 function randomNumberGenerator(min, max) {
@@ -32,10 +34,17 @@ function randomNumberGenerator(min, max) {
 }
 
 function setStatus(arg) {
+    attempts++
+    console.log(attempts)
     outputSection.innerHTML = ''
     const output = document.createElement('h1');
     output.textContent = arg
     outputSection.appendChild(output);
+
+    if (attempts == 10) {
+        setStatus('You Lost. 😓😓😓')
+        playAgain()
+    }
 }
 
 function playAgain() {
